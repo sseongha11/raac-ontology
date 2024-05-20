@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RAAC Ontology</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" th:href="@{/css/lib/bootstrap.min.css}">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" th:href="@{/}">RAAC Ontology</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" th:href="@{/}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/create}">Create Class</a>
+            </li>
+            <!-- Add more navigation links as needed -->
+        </ul>
+    </div>
+</nav>
+<form action="/create" method="post">
+    <label for="className">Class Name:</label><br>
+    <input type="text" id="className" name="className"><br>
+    <button type="submit">Create Class</button>
+</form>
+</body>
+</html>
