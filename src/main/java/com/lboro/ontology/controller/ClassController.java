@@ -10,11 +10,9 @@ import java.io.File;
 import java.util.Set;
 
 @Controller
-public class HomeController {
-
-
-    @GetMapping("/")
-    public String home(Model model) {
+public class ClassController {
+    @GetMapping("/class")
+    public String classPage(Model model) {
         try {
             OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
             IRI ontologyIRI = IRI.create("http://www.example.org/raac");
@@ -26,6 +24,6 @@ public class HomeController {
             model.addAttribute("message", "Error loading RAAC Ontology: " + e.getMessage());
         }
 
-        return "index";
+        return "class";
     }
 }

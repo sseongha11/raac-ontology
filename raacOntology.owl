@@ -29,12 +29,24 @@
     
 
 
-    <!-- http://www.example.org/raac#RAACPanel -->
+    <!-- http://www.example.org/raac#RAAC_ROOF -->
 
 
-    <owl:Class rdf:about="http://www.example.org/raac#RAACPanel">
-        <rdfs:subClassOf rdf:resource="http://www.example.org/raac#Building_Material"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.example.org/raac#RAAC_ROOF"/>
+    
+
+
+    <!-- http://www.example.org/raac#RAAC_WALL -->
+
+
+    <owl:Class rdf:about="http://www.example.org/raac#RAAC_WALL"/>
+    
+
+
+    <!-- http://www.example.org/raac#RAAC_Wall -->
+
+
+    <owl:Class rdf:about="http://www.example.org/raac#RAAC_Wall"/>
 </rdf:RDF>
 
 

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Class</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" th:href="@{/css/lib/bootstrap.min.css}">
+</head>
+<body>
+<div  th:insert="~{navbar ::navbar}"></div>
+<form action="api/ontology/addClass" method="post">
+    <label for="className">Class Name:</label><br>
+    <input type="text" id="className" name="className"><br>
+    <label for="subclassName">Subclass Name (optional):</label><br>
+    <input type="text" id="subclassName" name="subclassName"><br>
+    <button type="submit">Create Class</button>
+</form>
+
+<form action="api/ontology/class/update" method="post">
+    <label for="oldClassName">Old Class Name:</label><br>
+    <input type="text" id="oldClassName" name="oldClassName"><br>
+    <label for="newClassName">New Class Name:</label><br>
+    <input type="text" id="newClassName" name="newClassName"><br>
+    <button type="submit">Update Class</button>
+</form>
+
+<form action="api/ontology/class/delete" method="post">
+    <label for="dclassName">Class Name:</label><br>
+    <input type="text" id="dclassName" name="className"><br>
+    <button type="submit">Delete Class</button>
+</form>
+
+<h2>Classes</h2>
+<ul>
+    <li th:each="class : ${classes}" th:text="${class}"></li>
+</ul>
+</body>
+</html>
